@@ -56,10 +56,10 @@ body #chapter h1 {
     }
 }
 a {
-    color: #00bdf3;
+    color: #bbbfc4;
 }
 a:hover {
-    color: #0082a7;
+    color: #4c5b68;
 }
 pre {
     position: relative;
@@ -102,12 +102,15 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     box-shadow: inset 0 1px 3px rgba(0,0,0,.06),0 0 5px rgba(0,169,218,.7)
 }
 #header-wrapper {
-    background: #bbc0c5;
+    background: #4c5b68;
     color: #fff;
     text-align: center;
-    border-bottom: 4px solid #bbc0c5;
+    border-bottom: 4px solid #bbbfc4;
     padding: 1rem;
 }
+
+
+
 #header a {
     display: inline-block;
 }
@@ -121,8 +124,8 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 .searchbox {
     margin-top: 1rem;
     position: relative;
-    border: 1px solid #bbc0c5;
-    background: #bbc0c5;
+    border: 1px solid #4c5b68;
+    background: #bbbfc4;
     border-radius: 4px;
 }
 .searchbox label {
@@ -173,7 +176,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     }
 }
 #sidebar {
-    background-color: #bbc0c5;
+    background-color: #bbbfc4;
     position: fixed;
     top: 0;
     width: 300px;
@@ -183,16 +186,16 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     font-size: 15px;
 }
 #sidebar a {
-    color: #ccc;
+    color: #000;
 }
 #sidebar a:hover {
-    color: #e6e6e6;
+    color: #F8EBE8;
 }
 #sidebar a.subtitle {
     color: rgba(204, 204, 204, 0.6);
 }
 #sidebar hr {
-    border-bottom: 1px solid #504323;
+    border-bottom: 1px solid #bbbfc4;
 }
 #sidebar a.padding {
     padding: 0 1rem;
@@ -217,7 +220,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     font-size: 80%;
 }
 #sidebar h5.parent a {
-    background: #504323;
+    background: #F8EBE8;
     color: #d9d9d9 !important;
 }
 #sidebar h5.active a {
@@ -276,15 +279,15 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     margin-top: 9px;
 }
 #sidebar ul.topics > li.parent, #sidebar ul.topics > li.active {
-    background: #bbc0c5;
+    background: #bbbfc4;
     margin-left: -1rem;
     margin-right: -1rem;
     padding-left: 1rem;
     padding-right: 1rem;
 }
 #sidebar ul li.active > a {
-    background: #fff;
-    color: #777 !important;
+    background: #E1BBAC;
+    color: #4c5b68 !important;
     margin-left: -1rem;
     margin-right: -1rem;
     padding-left: 1rem;
@@ -580,7 +583,7 @@ section.attachments.green .attachments-files {
 
 section.attachments.blue label {
     color: #fff;
-    background: #6AB0DE;
+    background: #bbbfc4;
 }
 
 section.attachments.blue .attachments-files {
@@ -688,7 +691,7 @@ hr {
     background: #35393c;
 }
 #body-inner .tabs-wrapper.ui-theme-badges .tabs-nav li.current a {
-    background: #bbc0c5;
+    background: #4d5257;
 }
 #body-inner pre {
     white-space: pre-wrap;
@@ -714,15 +717,15 @@ td {
 .button {
     background: #9c6fb6;
     color: #fff;
-    box-shadow: 0 3px 0 #00a5d4;
+    box-shadow: 0 3px 0 #bbbfc4;
 }
 .button:hover {
-    background: #00a5d4;
-    box-shadow: 0 3px 0 #008db6;
+    background: #bbbfc4;
+    box-shadow: 0 3px 0 #bbbfc4;
     color: #fff;
 }
 .button:active {
-    box-shadow: 0 1px 0 #008db6;
+    box-shadow: 0 1px 0 #bbbfc4;
 }
 .button-secondary {
     background: #F8B450;
@@ -973,7 +976,7 @@ td {
 }
 .lifecycle #body-inner .level-3 + ol {
     background: #f3f9fd;
-    border: 4px solid #3498DB;
+    border: 4px solid #bbbfc4;
     color: #2980B9;
 }
 .lifecycle #body-inner .level-3 + ol h3 {
@@ -1116,7 +1119,7 @@ pre .copy-to-clipboard:hover {
     text-align: right;
 }
 #sidebar ul li.visited > a .read-icon {
-    color: #00bdf3;
+    color: #4c5b68;
     display: inline;
 }
 
