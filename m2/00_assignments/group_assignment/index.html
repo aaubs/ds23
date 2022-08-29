@@ -1,598 +1,77 @@
-<!doctype html><html lang=en class="js csstransforms3d">
-<head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=generator content="Hugo 0.89.4">
-<meta name=description content="Social Data Science 2021">
-<meta name=author content="Roman Jurowetzki & Daniel Hain">
-<link rel=icon href=/SDS-2021/images/favicon.png type=image/png>
-<title>M2 (Mandatory) Assignment :: Social Data Science 2021</title>
-<link href=/SDS-2021/css/nucleus.css?1637931281 rel=stylesheet>
-<link href=/SDS-2021/css/fontawesome-all.min.css?1637931281 rel=stylesheet>
-<link href=/SDS-2021/css/hybrid.css?1637931281 rel=stylesheet>
-<link href=/SDS-2021/css/featherlight.min.css?1637931281 rel=stylesheet>
-<link href=/SDS-2021/css/perfect-scrollbar.min.css?1637931281 rel=stylesheet>
-<link href=/SDS-2021/css/auto-complete.css?1637931281 rel=stylesheet>
-<link href=/SDS-2021/css/atom-one-dark-reasonable.css?1637931281 rel=stylesheet>
-<link href=/SDS-2021/css/theme.css?1637931281 rel=stylesheet>
-<link href=/SDS-2021/css/tabs.css?1637931281 rel=stylesheet>
-<link href=/SDS-2021/css/hugo-theme.css?1637931281 rel=stylesheet>
-<script src=/SDS-2021/js/jquery-3.3.1.min.js?1637931281></script>
-<style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
-</head>
-<body data-url=/SDS-2021/m2/00_assignments/group_assignment/>
-<nav id=sidebar class=showVisitedLinks>
-<div id=header-wrapper>
-<div id=header>
-<a href=https://sds-aau.github.io/SDS-2021/>
-<img alt=logo src=/SDS-2021/images/logo.png>
-</a>
-Social Data Science 2021
-</div>
-<div class=searchbox>
-<label for=search-by><i class="fas fa-search"></i></label>
+<!doctype html><html lang=en class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.101.0"><meta name=description content="Social Data Science 2021"><meta name=author content="Roman Jurowetzki & Daniel Hain"><link rel=icon href=/SDS-2021/images/favicon.png type=image/png><title>M2 (Mandatory) Assignment :: Social Data Science 2021</title><link href=/SDS-2021/css/nucleus.css?1661771235 rel=stylesheet><link href=/SDS-2021/css/fontawesome-all.min.css?1661771235 rel=stylesheet><link href=/SDS-2021/css/hybrid.css?1661771235 rel=stylesheet><link href=/SDS-2021/css/featherlight.min.css?1661771235 rel=stylesheet><link href=/SDS-2021/css/perfect-scrollbar.min.css?1661771235 rel=stylesheet><link href=/SDS-2021/css/auto-complete.css?1661771235 rel=stylesheet><link href=/SDS-2021/css/atom-one-dark-reasonable.css?1661771235 rel=stylesheet><link href=/SDS-2021/css/theme.css?1661771235 rel=stylesheet><link href=/SDS-2021/css/tabs.css?1661771235 rel=stylesheet><link href=/SDS-2021/css/hugo-theme.css?1661771235 rel=stylesheet><script src=/SDS-2021/js/jquery-3.3.1.min.js?1661771235></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/SDS-2021/m2/00_assignments/group_assignment/><nav id=sidebar class=showVisitedLinks><div id=header-wrapper><div id=header><a href=https://sds-aau.github.io/SDS-2021/><img alt=logo src=/SDS-2021/images/logo.png></a>
+Social Data Science 2021</div><div class=searchbox><label for=search-by><i class="fas fa-search"></i></label>
 <input data-search-input id=search-by type=search placeholder=Search...>
-<span data-search-clear><i class="fas fa-times"></i></span>
-</div>
-<script type=text/javascript src=/SDS-2021/js/lunr.min.js?1637931281></script>
-<script type=text/javascript src=/SDS-2021/js/auto-complete.js?1637931281></script>
-<script type=text/javascript>var baseurl="https://sds-aau.github.io/SDS-2021/"</script>
-<script type=text/javascript src=/SDS-2021/js/search.js?1637931281></script>
-</div>
-<div class=highlightable>
-<ul class=topics>
-<li data-nav-id=/SDS-2021/info/ title="Info, Schedule & Co" class=dd-item>
-<a href=/SDS-2021/info/>
-Info, Schedule & Co
-<i class="fas fa-check read-icon"></i>
-</a>
-<ul>
-<li data-nav-id=/SDS-2021/info/01_infrastructure/ title=Infrastructure class=dd-item>
-<a href=/SDS-2021/info/01_infrastructure/>
-Infrastructure
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-<li data-nav-id=/SDS-2021/info/02_modules/ title=Modules class=dd-item>
-<a href=/SDS-2021/info/02_modules/>
-Modules
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-<li data-nav-id=/SDS-2021/info/04_litetrature/ title="Literature & Resources" class=dd-item>
-<a href=/SDS-2021/info/04_litetrature/>
-Literature & Resources
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-<li data-nav-id=/SDS-2021/info/03_schedule/ title="Semester Schedule" class=dd-item>
-<a href=/SDS-2021/info/03_schedule/>
-Semester Schedule
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-<li data-nav-id=/SDS-2021/info/05_requirements_project/ title="Semester Project Requirements" class=dd-item>
-<a href=/SDS-2021/info/05_requirements_project/>
-Semester Project Requirements
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/SDS-2021/m1/ title="Applied Data Science and Machine Learning" class=dd-item>
-<a href=/SDS-2021/m1/>
-<b>1. </b>Applied Data Science and Machine Learning
-<i class="fas fa-check read-icon"></i>
-</a>
-<ul>
-<li data-nav-id=/SDS-2021/m1/00_assignments/ title=Assignments class=dd-item>
-<a href=/SDS-2021/m1/00_assignments/>
-Assignments
-<i class="fas fa-check read-icon"></i>
-</a>
-<ul>
-<li data-nav-id=/SDS-2021/m1/00_assignments/assignment1/ title="Assignment 1 - Digital Nomads" class=dd-item>
-<a href=/SDS-2021/m1/00_assignments/assignment1/>
-Assignment 1 - Digital Nomads
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-<li data-nav-id=/SDS-2021/m1/00_assignments/assignment2/ title="Assignment 2 - UML with Pokemon" class=dd-item>
-<a href=/SDS-2021/m1/00_assignments/assignment2/>
-Assignment 2 - UML with Pokemon
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-<li data-nav-id=/SDS-2021/m1/00_assignments/group_assignment/ title="Group Assignment" class=dd-item>
-<a href=/SDS-2021/m1/00_assignments/group_assignment/>
-Group Assignment
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/SDS-2021/m1/00_workshops/ title=Workshops class=dd-item>
-<a href=/SDS-2021/m1/00_workshops/>
-Workshops
-<i class="fas fa-check read-icon"></i>
-</a>
-<ul>
-<li data-nav-id=/SDS-2021/m1/00_workshops/01_workshop1/ title="Workshop 1" class=dd-item>
-<a href=/SDS-2021/m1/00_workshops/01_workshop1/>
-Workshop 1
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-<li data-nav-id=/SDS-2021/m1/00_workshops/02_workshop2/ title="Workshop 2" class=dd-item>
-<a href=/SDS-2021/m1/00_workshops/02_workshop2/>
-Workshop 2
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-<li data-nav-id=/SDS-2021/m1/00_workshops/03_workshop3/ title="Workshop 3: ML on insideairbnb" class=dd-item>
-<a href=/SDS-2021/m1/00_workshops/03_workshop3/>
-Workshop 3: ML on insideairbnb
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/SDS-2021/m1/02_basics/ title="Basics of Statistical Programming and Data Manipulation (W35-36)" class=dd-item>
-<a href=/SDS-2021/m1/02_basics/>
-Basics of Statistical Programming and Data Manipulation (W35-36)
-<i class="fas fa-check read-icon"></i>
-</a>
-<ul>
-<li data-nav-id=/SDS-2021/m1/02_basics/01_stat_prog/ title="Basics Statistical Programming" class=dd-item>
-<a href=/SDS-2021/m1/02_basics/01_stat_prog/>
-Basics Statistical Programming
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-<li data-nav-id=/SDS-2021/m1/02_basics/02_data_manipulation/ title="Basics Data Manipulation" class=dd-item>
-<a href=/SDS-2021/m1/02_basics/02_data_manipulation/>
-Basics Data Manipulation
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-<li data-nav-id=/SDS-2021/m1/02_basics/03_data_visualization/ title="Basics Data Visualization" class=dd-item>
-<a href=/SDS-2021/m1/02_basics/03_data_visualization/>
-Basics Data Visualization
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/SDS-2021/m1/01_warmup/ title="Warmup (W35)" class=dd-item>
-<a href=/SDS-2021/m1/01_warmup/>
-Warmup (W35)
-<i class="fas fa-check read-icon"></i>
-</a>
-<ul>
-<li data-nav-id=/SDS-2021/m1/01_warmup/01_business/ title="Intro Talk - Data Science in business" class=dd-item>
-<a href=/SDS-2021/m1/01_warmup/01_business/>
-Intro Talk - Data Science in business
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-<li data-nav-id=/SDS-2021/m1/01_warmup/02_ecosystem/ title="The Data Science Ecosystem" class=dd-item>
-<a href=/SDS-2021/m1/01_warmup/02_ecosystem/>
-The Data Science Ecosystem
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/SDS-2021/m1/03_ml/ title="Basics Machine Learning (W37-38)" class=dd-item>
-<a href=/SDS-2021/m1/03_ml/>
-Basics Machine Learning (W37-38)
-<i class="fas fa-check read-icon"></i>
-</a>
-<ul>
-<li data-nav-id=/SDS-2021/m1/03_ml/01_uml/ title="Unsupervised Machine Learning (UML)" class=dd-item>
-<a href=/SDS-2021/m1/03_ml/01_uml/>
-Unsupervised Machine Learning (UML)
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-<li data-nav-id=/SDS-2021/m1/03_ml/02_sml/ title="Supervised Machine Learning (SML)" class=dd-item>
-<a href=/SDS-2021/m1/03_ml/02_sml/>
-Supervised Machine Learning (SML)
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li data-nav-id=/SDS-2021/m2/ title="Network Analysis & NLP" class="dd-item
-parent">
-<a href=/SDS-2021/m2/>
-<b>2. </b>Network Analysis & NLP
-<i class="fas fa-check read-icon"></i>
-</a>
-<ul>
-<li data-nav-id=/SDS-2021/m2/00_assignments/ title=Assignments class="dd-item
-parent">
-<a href=/SDS-2021/m2/00_assignments/>
-Assignments
-<i class="fas fa-check read-icon"></i>
-</a>
-<ul>
-<li data-nav-id=/SDS-2021/m2/00_assignments/assignment1/ title="Assignment 1 - Network Analysis" class=dd-item>
-<a href=/SDS-2021/m2/00_assignments/assignment1/>
-Assignment 1 - Network Analysis
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-<li data-nav-id=/SDS-2021/m2/00_assignments/assignment2/ title="Assignment 2 - NLP" class=dd-item>
-<a href=/SDS-2021/m2/00_assignments/assignment2/>
-Assignment 2 - NLP
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-<li data-nav-id=/SDS-2021/m2/00_assignments/group_assignment/ title="M2 (Mandatory) Assignment" class="dd-item active">
-<a href=/SDS-2021/m2/00_assignments/group_assignment/>
-M2 (Mandatory) Assignment
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/SDS-2021/m2/00_workshops/ title=Workshops class=dd-item>
-<a href=/SDS-2021/m2/00_workshops/>
-Workshops
-<i class="fas fa-check read-icon"></i>
-</a>
-<ul>
-<li data-nav-id=/SDS-2021/m2/00_workshops/01_workshop1/ title="Workshop 1 - Danish Power Elites" class=dd-item>
-<a href=/SDS-2021/m2/00_workshops/01_workshop1/>
-Workshop 1 - Danish Power Elites
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-<li data-nav-id=/SDS-2021/m2/00_workshops/02_workshop2/ title="Workshop 2 - Classification of Political US Tweets" class=dd-item>
-<a href=/SDS-2021/m2/00_workshops/02_workshop2/>
-Workshop 2 - Classification of Political US Tweets
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-<li data-nav-id=/SDS-2021/m2/00_workshops/03_workshop3/ title="Workshop 3 - Advanced Applications with NLP and Networks" class=dd-item>
-<a href=/SDS-2021/m2/00_workshops/03_workshop3/>
-Workshop 3 - Advanced Applications with NLP and Networks
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/SDS-2021/m2/01_networks/ title="Network Analysis" class=dd-item>
-<a href=/SDS-2021/m2/01_networks/>
-Network Analysis
-<i class="fas fa-check read-icon"></i>
-</a>
-<ul>
-<li data-nav-id=/SDS-2021/m2/01_networks/1_networks/ title="Basics Network Analysis" class=dd-item>
-<a href=/SDS-2021/m2/01_networks/1_networks/>
-Basics Network Analysis
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-<li data-nav-id=/SDS-2021/m2/01_networks/2_networks_intermediate/ title="Intermediate Network Analysis" class=dd-item>
-<a href=/SDS-2021/m2/01_networks/2_networks_intermediate/>
-Intermediate Network Analysis
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-<li data-nav-id=/SDS-2021/m2/01_networks/3_networks_2mode/ title="Network 2-Mode" class=dd-item>
-<a href=/SDS-2021/m2/01_networks/3_networks_2mode/>
-Network 2-Mode
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/SDS-2021/m2/02_nlp/ title="Natural Language Processing" class=dd-item>
-<a href=/SDS-2021/m2/02_nlp/>
-Natural Language Processing
-<i class="fas fa-check read-icon"></i>
-</a>
-<ul>
-<li data-nav-id=/SDS-2021/m2/02_nlp/0_nlp_theory/ title="Natural Language Processing - Theory" class=dd-item>
-<a href=/SDS-2021/m2/02_nlp/0_nlp_theory/>
-Natural Language Processing - Theory
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-<li data-nav-id=/SDS-2021/m2/02_nlp/1_nlp_string/ title="Application: String Manipulation" class=dd-item>
-<a href=/SDS-2021/m2/02_nlp/1_nlp_string/>
-Application: String Manipulation
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-<li data-nav-id=/SDS-2021/m2/02_nlp/2_nlp_longtext/ title="Application: Working with long text" class=dd-item>
-<a href=/SDS-2021/m2/02_nlp/2_nlp_longtext/>
-Application: Working with long text
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-<li data-nav-id=/SDS-2021/m2/02_nlp/3_nlp_topic/ title="Application: Vectorization and Topic Modelling" class=dd-item>
-<a href=/SDS-2021/m2/02_nlp/3_nlp_topic/>
-Application: Vectorization and Topic Modelling
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li data-nav-id=/SDS-2021/m3/ title="Deep Learning" class=dd-item>
-<a href=/SDS-2021/m3/>
-<b>3. </b>Deep Learning
-<i class="fas fa-check read-icon"></i>
-</a>
-<ul>
-<li data-nav-id=/SDS-2021/m3/00_assignments/ title=Assignments class=dd-item>
-<a href=/SDS-2021/m3/00_assignments/>
-Assignments
-<i class="fas fa-check read-icon"></i>
-</a>
-<ul>
-<li data-nav-id=/SDS-2021/m3/00_assignments/assignment1/ title="M3 Assignment - Elon vs. GPT-2" class=dd-item>
-<a href=/SDS-2021/m3/00_assignments/assignment1/>
-M3 Assignment - Elon vs. GPT-2
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-<li data-nav-id=/SDS-2021/m3/00_assignments/group_assignment/ title="M3 (Mandatory) Assignment" class=dd-item>
-<a href=/SDS-2021/m3/00_assignments/group_assignment/>
-M3 (Mandatory) Assignment
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/SDS-2021/m3/00_workshops/ title=Workshops class=dd-item>
-<a href=/SDS-2021/m3/00_workshops/>
-Workshops
-<i class="fas fa-check read-icon"></i>
-</a>
-<ul>
-<li data-nav-id=/SDS-2021/m3/00_workshops/01_workshop1/ title="Workshop 1 - AirBnb revisited" class=dd-item>
-<a href=/SDS-2021/m3/00_workshops/01_workshop1/>
-Workshop 1 - AirBnb revisited
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-<li data-nav-id=/SDS-2021/m3/00_workshops/02_workshop2/ title="Workshop 2 - Fun with Timeseries" class=dd-item>
-<a href=/SDS-2021/m3/00_workshops/02_workshop2/>
-Workshop 2 - Fun with Timeseries
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-<li data-nav-id=/SDS-2021/m3/00_workshops/03_workshop3/ title="Workshop 3 - Advanced applicaions and wrap-up" class=dd-item>
-<a href=/SDS-2021/m3/00_workshops/03_workshop3/>
-Workshop 3 - Advanced applicaions and wrap-up
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/SDS-2021/m3/01_ann/ title="Introduction to Neural Networks" class=dd-item>
-<a href=/SDS-2021/m3/01_ann/>
-Introduction to Neural Networks
-<i class="fas fa-check read-icon"></i>
-</a>
-<ul>
-<li data-nav-id=/SDS-2021/m3/01_ann/1_ann/ title="Introduction Neural Networks" class=dd-item>
-<a href=/SDS-2021/m3/01_ann/1_ann/>
-Introduction Neural Networks
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/SDS-2021/m3/02_cnn_rnn/ title="Advanced architectures" class=dd-item>
-<a href=/SDS-2021/m3/02_cnn_rnn/>
-Advanced architectures
-<i class="fas fa-check read-icon"></i>
-</a>
-<ul>
-<li data-nav-id=/SDS-2021/m3/02_cnn_rnn/1_cnn/ title="Convolutional Neural Networks" class=dd-item>
-<a href=/SDS-2021/m3/02_cnn_rnn/1_cnn/>
-Convolutional Neural Networks
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-<li data-nav-id=/SDS-2021/m3/02_cnn_rnn/2_rnn/ title="Recurrent Neural Networks" class=dd-item>
-<a href=/SDS-2021/m3/02_cnn_rnn/2_rnn/>
-Recurrent Neural Networks
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li data-nav-id=/SDS-2021/m4/ title="Semester Project" class=dd-item>
-<a href=/SDS-2021/m4/>
-<b>4. </b>Semester Project
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-</ul>
-<section id=prefooter>
-<hr>
-<ul>
-<li><a class=padding href=# data-clear-history-toggle><i class="fas fa-history fa-fw"></i> Clear History</a></li>
-</ul>
-</section>
-<section id=footer>
-<center>
-<p>Built with <a href=https://github.com/matcornic/hugo-theme-learn><i class="fas fa-heart"></i></a> from <a href=https://getgrav.org>Grav</a> and <a href=https://gohugo.io/>Hugo</a></p>
-</center>
-<script async defer src=https://buttons.github.io/buttons.js></script>
-</section>
-</div>
-</nav>
-<section id=body>
-<div id=overlay></div>
-<div class="padding highlightable">
-<div>
-<div id=top-bar>
-<div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb>
-<span id=sidebar-toggle-span>
-<a href=# id=sidebar-toggle data-sidebar-toggle>
-<i class="fas fa-bars"></i>
-</a>
-</span>
-<span class=links>
-<a href=/SDS-2021/>Social Data Science 2021</a> > <a href=/SDS-2021/m2/>Network Analysis & NLP</a> > <a href=/SDS-2021/m2/00_assignments/>Assignments</a> > M2 (Mandatory) Assignment
-</span>
-</div>
-</div>
-</div>
-<div id=head-tags>
-</div>
-<div id=body-inner>
-<h1>
-M2 (Mandatory) Assignment
-</h1>
-<h2 id=sds-2021---m2-mandatory-assignment>SDS 2021 - M2: (Mandatory) Assignment</h2>
-<h2 id=introduction>Introduction</h2>
-<p>Now it is time to bring most these steps together and apply them to a setting that you find interesting. This should apply the following tasks.</p>
-<ul>
-<li>Identify an interesting problem that can be tackled using netork analysis and NLP techniques.</li>
-<li>Optimally, this is done within one dataset. However, the assignment can also be done using 2 different datasets, if nothing suitable combinging both elements of netork analysis and NLP is found.</li>
-<li>Select and obtain relevant data to do so.</li>
-<li>Clean and manipulate the data to make it useful for network analysis and NLP techniques.</li>
-<li>Execute an analysis containing elements of network analysis and NLP you have been exposed to (&mldr; or beyond)</li>
-<li>Document your workflow in a reconstructable manner.</li>
-<li>Report your findings in an accessible manner.</li>
-</ul>
-<h2 id=task-description>Task description</h2>
-<p>Find and select datasets on your own, and perform an interesting and informative analysis using the elements stated above on your own.</p>
-<h3 id=data--problem-identification>Data & Problem identification</h3>
-<p>In this exercise, you are asked to choose and obtain a dataset you consider interesting and appropriate for the tasks required. You are welcome to use existing datasets for <a href=https://github.com/niderhoff/nlp-datasets target=_blank>language</a> and <a href=https://snap.stanford.edu/data/ target=_blank>networks</a> but at this stage you could also consider getting your own data (e.g. Twitter API, Instagram, news repositories etc.)</p>
-<p>The data should be large enough and of proper granularity to be interesting for NLP and network analysis techniques. If you are in doubt, please reach out.</p>
-<p>What we expect you to do:</p>
-<ul>
-<li>Identify an interesting problem that can be tackled using data science techniques applied to natural language and networks.</li>
-<li>Select and obtain relevant data to do so.</li>
-<li>Clean and manipulate the data to make it useful.</li>
-<li>Carry out an exploratory data analysis to provide intuition into the content of the data, and interesting relationships to be found in it.</li>
-<li>Use unsupervised ML techniques to discover relationships within the data such as interesting topics or latent network structures.</li>
-<li>Use supervised ML techniques to create models that predict an outcome of interest.</li>
-<li>Document your workflow in a reconstructable manner.</li>
-<li>Report your findings in an accessible manner.</li>
-</ul>
-<h3 id=analysis-pipeline>Analysis pipeline</h3>
-<p>The analysis to be carried out by you has to contain elements of <strong>data manipulation</strong>, <strong>exploration</strong>, <strong>unsupervised</strong> and <strong>supervised ML</strong> as applied to <strong>relational</strong> and <strong>language data</strong>.</p>
-<p>In the best case, you combine network data with language elements. Twitter is a good (and easy) example, as you can, for instance, combine mention-networks with sentiments expressed in the tweets. The article below is a creative example of that (with a rather small NLP part).</p>
-<p><a href=https://link.springer.com/chapter/10.1007/978-3-319-13734-6_25 target=_blank>Liu, Z., &amp;amp; Weber, I. (2014, November)</a>. Is Twitter a public sphere for online conflicts? A cross-ideological and cross-hierarchical look. In International Conference on Social Informatics (pp. 336-347). Springer, Cham.</p>
-<ul>
-<li>Definition of a problem statement and a short outline of the implementation</li>
-<li>Description of data acquisition / how it was collected (by you or the publisher of the data)</li>
-<li>Data preparation (general)
-<ul>
-<li>Data cleaning (if needed)</li>
-<li>Recoding (label encoding, dummy creation etc.)</li>
-<li>Merging and wrangling (if needed)</li>
-</ul>
-</li>
-<li>Missing data imputation (if applicable and deemed relevant)</li>
-<li>Network Data - preparation
-<ul>
-<li>Extraction and formatting</li>
-<li>Creation of functional graphs with relevant attributes</li>
-</ul>
-</li>
-<li>NLP - preparation
-<ul>
-<li>Extraction & Cleaning</li>
-<li>Tokenization</li>
-<li>Filtering & Lemmatization / Stemming (if needed)</li>
-</ul>
-</li>
-<li>Network analysis
-<ul>
-<li>Calculation of relevant indicators on different levels / EDA</li>
-<li>Projection (in the case of bipartite graphs)</li>
-<li>Identification of community structures</li>
-</ul>
-</li>
-<li>NLP
-<ul>
-<li>EDA / simple frequency-based analysis</li>
-<li>Simple vectorization (BoW, Tf-idf)</li>
-<li>Topic modelling / Clustering (LDA / LSA)</li>
-<li>Embedding-model based vectorization (Word2Vec, Fasttext, GloVe)</li>
-<li>Semantic search</li>
-</ul>
-</li>
-<li>Supervised / Unsupervised ML
-<ul>
-<li>Try to link your results from network analysis or NLP with a more traditional ML problem.</li>
-</ul>
-</li>
-</ul>
-<p><strong>Many of the steps are optional.</strong> So choose which methods you deem helpful and relevant to explore your chosen problem.</p>
-<p><strong>Note:</strong> Quality > Quantity. Consider which analysis, summarization, and visualization adds value. Excessive and unselective outputs (e.g. running 20 different models without providing a reason for, providing all possibilities of different plots without discussing and evaluating the insights gained from it) will not be considered helpful but rather distracting.</p>
-<h3 id=some-inspirational-examples-non-binding-and-non-exhaustive>Some inspirational examples (non-binding, and non-exhaustive):</h3>
-<ol>
-<li>You obtain a dataset with tweets on a current debate (e.g. #MeeToo) and try to map the discourse.
-<ul>
-<li>You perform “naive” NLP, counting handles, hashtags, basic plotting etc. to get some overview.</li>
-<li>You perform “out-of-the-box” sentiment analysis and plot tweets on a map, colouring by sentiment.</li>
-<li>You perform topic modelling and identify the sub-discussions.</li>
-<li>Isolating handles/retweets, you identify some interaction patterns, use network indicator to identify thought leaders or conflicting communities as well as people that try to negotiate between positions.</li>
-</ul>
-</li>
-<li>You obtain a bibliographic dataset on a field of study (or from an entity such as a university) of interest, e.g., from scopus.
-<ul>
-<li>You perform a network analysis on different levels of aggregations, identifying key publications, scientists etc.</li>
-<li>You run a topic model to identify relevant discourses.</li>
-<li>You might then answer questions such as: Did the discourses change over time? In case so, who or what drives these changes?</li>
-</ul>
-</li>
-</ol>
-<h3 id=documentation-and-deliverables>Documentation and Deliverables</h3>
-<p>You are asked to hand in a <strong>well commented functional computational notebook</strong></p>
-<h4 id=computational-notebook>Computational Notebook</h4>
-<p>The notebook targets a machine-learning literate audience. Here you can go deeper into the technical details and method considerations. Provide thorough documentation of the whole process, the used methods. Describe the intuition behind the selected and used methods, justify choices made, and interpret results (e.g. Why scaling? Why splitting the data? Why certain tabulations and visualizations? What can be seen from &mldr; ?, How did you select a particular algorithm? Why did you scale features in one way or another?).</p>
-<p>Please provide the notebook as a PDF (Knittered from rmd or converted ipynb) with a public link to a functional Colab version (test it beforehand in incognito/private mode of your browser)</p>
-<h4 id=stakeholder-report>Stakeholder Report</h4>
-<p>The stakeholder report (simple PDF, no code) summarises the analysis for a <strong>non-technical</strong> audience. Here you don&rsquo;t need to discuss alternative approaches to standardization and alike.</p>
-<p>Instead, you should try to explain the analysis and results, emphasizing its meaning and interpretation. Aim at a length of not more than 5 pages, including tables & visualizations.</p>
-<h2 id=finally>Finally</h2>
-<ul>
-<li>Submission deadline is <strong>01.11</strong> - on <a href=https://digitaleksamen.aau.dk/ target=_blank>https://digitaleksamen.aau.dk/</a></li>
-<li>Write to the secretary about your groups and language choice</li>
-<li>In case of trouble/issues/questions, please write on Teams.</li>
-</ul>
-<footer class=footline>
-</footer>
-</div>
-</div>
-<div id=navigation>
-<a class="nav nav-prev" href=/SDS-2021/m2/00_assignments/assignment2/ title="Assignment 2 - NLP"> <i class="fa fa-chevron-left"></i></a>
-<a class="nav nav-next" href=/SDS-2021/m2/00_workshops/ title=Workshops style=margin-right:0><i class="fa fa-chevron-right"></i></a>
-</div>
-</section>
-<div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
-<div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
-</div>
-<script src=/SDS-2021/js/clipboard.min.js?1637931281></script>
-<script src=/SDS-2021/js/perfect-scrollbar.min.js?1637931281></script>
-<script src=/SDS-2021/js/perfect-scrollbar.jquery.min.js?1637931281></script>
-<script src=/SDS-2021/js/jquery.sticky.js?1637931281></script>
-<script src=/SDS-2021/js/featherlight.min.js?1637931281></script>
-<script src=/SDS-2021/js/highlight.pack.js?1637931281></script>
-<script>hljs.initHighlightingOnLoad()</script>
-<script src=/SDS-2021/js/modernizr.custom-3.6.0.js?1637931281></script>
-<script src=/SDS-2021/js/learn.js?1637931281></script>
-<script src=/SDS-2021/js/hugo-learn.js?1637931281></script>
-<script src=/SDS-2021/mermaid/mermaid.js?1637931281></script>
-<script>mermaid.initialize({startOnLoad:!0})</script>
-<script>(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-105947713-1','auto'),ga('send','pageview')</script>
-</body>
-</html>
+<span data-search-clear><i class="fas fa-times"></i></span></div><script type=text/javascript src=/SDS-2021/js/lunr.min.js?1661771235></script>
+<script type=text/javascript src=/SDS-2021/js/auto-complete.js?1661771235></script>
+<script type=text/javascript>var baseurl="https://sds-aau.github.io/SDS-2021/"</script><script type=text/javascript src=/SDS-2021/js/search.js?1661771235></script></div><div class=highlightable><ul class=topics><li data-nav-id=/SDS-2021/info/ title="Info, Schedule & Co" class=dd-item><a href=/SDS-2021/info/>Info, Schedule & Co
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/SDS-2021/info/01_infrastructure/ title=Infrastructure class=dd-item><a href=/SDS-2021/info/01_infrastructure/>Infrastructure
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/SDS-2021/info/02_modules/ title=Modules class=dd-item><a href=/SDS-2021/info/02_modules/>Modules
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/SDS-2021/info/04_litetrature/ title="Literature & Resources" class=dd-item><a href=/SDS-2021/info/04_litetrature/>Literature & Resources
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/SDS-2021/info/03_schedule/ title="Semester Schedule" class=dd-item><a href=/SDS-2021/info/03_schedule/>Semester Schedule
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/SDS-2021/info/05_requirements_project/ title="Semester Project Requirements" class=dd-item><a href=/SDS-2021/info/05_requirements_project/>Semester Project Requirements
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/SDS-2021/m1/ title="Applied Data Science and Machine Learning" class=dd-item><a href=/SDS-2021/m1/><b>1. </b>Applied Data Science and Machine Learning
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/SDS-2021/m1/00_assignments/ title=Assignments class=dd-item><a href=/SDS-2021/m1/00_assignments/>Assignments
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/SDS-2021/m1/00_assignments/assignment1/ title="Assignment 1 - Digital Nomads" class=dd-item><a href=/SDS-2021/m1/00_assignments/assignment1/>Assignment 1 - Digital Nomads
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/SDS-2021/m1/00_assignments/assignment2/ title="Assignment 2 - UML with Pokemon" class=dd-item><a href=/SDS-2021/m1/00_assignments/assignment2/>Assignment 2 - UML with Pokemon
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/SDS-2021/m1/00_assignments/group_assignment/ title="Group Assignment" class=dd-item><a href=/SDS-2021/m1/00_assignments/group_assignment/>Group Assignment
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/SDS-2021/m1/00_workshops/ title=Workshops class=dd-item><a href=/SDS-2021/m1/00_workshops/>Workshops
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/SDS-2021/m1/00_workshops/01_workshop1/ title="Workshop 1" class=dd-item><a href=/SDS-2021/m1/00_workshops/01_workshop1/>Workshop 1
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/SDS-2021/m1/00_workshops/02_workshop2/ title="Workshop 2" class=dd-item><a href=/SDS-2021/m1/00_workshops/02_workshop2/>Workshop 2
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/SDS-2021/m1/00_workshops/03_workshop3/ title="Workshop 3: ML on insideairbnb" class=dd-item><a href=/SDS-2021/m1/00_workshops/03_workshop3/>Workshop 3: ML on insideairbnb
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/SDS-2021/m1/02_basics/ title="Basics of Statistical Programming and Data Manipulation (W35-36)" class=dd-item><a href=/SDS-2021/m1/02_basics/>Basics of Statistical Programming and Data Manipulation (W35-36)
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/SDS-2021/m1/02_basics/01_stat_prog/ title="Basics Statistical Programming" class=dd-item><a href=/SDS-2021/m1/02_basics/01_stat_prog/>Basics Statistical Programming
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/SDS-2021/m1/02_basics/02_data_manipulation/ title="Basics Data Manipulation" class=dd-item><a href=/SDS-2021/m1/02_basics/02_data_manipulation/>Basics Data Manipulation
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/SDS-2021/m1/02_basics/03_data_visualization/ title="Basics Data Visualization" class=dd-item><a href=/SDS-2021/m1/02_basics/03_data_visualization/>Basics Data Visualization
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/SDS-2021/m1/01_warmup/ title="Warmup (W35)" class=dd-item><a href=/SDS-2021/m1/01_warmup/>Warmup (W35)
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/SDS-2021/m1/01_warmup/01_business/ title="Intro Talk - Data Science in business" class=dd-item><a href=/SDS-2021/m1/01_warmup/01_business/>Intro Talk - Data Science in business
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/SDS-2021/m1/01_warmup/02_ecosystem/ title="The Data Science Ecosystem" class=dd-item><a href=/SDS-2021/m1/01_warmup/02_ecosystem/>The Data Science Ecosystem
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/SDS-2021/m1/03_ml/ title="Basics Machine Learning (W37-38)" class=dd-item><a href=/SDS-2021/m1/03_ml/>Basics Machine Learning (W37-38)
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/SDS-2021/m1/03_ml/01_uml/ title="Unsupervised Machine Learning (UML)" class=dd-item><a href=/SDS-2021/m1/03_ml/01_uml/>Unsupervised Machine Learning (UML)
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/SDS-2021/m1/03_ml/02_sml/ title="Supervised Machine Learning (SML)" class=dd-item><a href=/SDS-2021/m1/03_ml/02_sml/>Supervised Machine Learning (SML)
+<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li><li data-nav-id=/SDS-2021/m2/ title="Network Analysis & NLP" class="dd-item
+parent"><a href=/SDS-2021/m2/><b>2. </b>Network Analysis & NLP
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/SDS-2021/m2/00_assignments/ title=Assignments class="dd-item
+parent"><a href=/SDS-2021/m2/00_assignments/>Assignments
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/SDS-2021/m2/00_assignments/assignment1/ title="Assignment 1 - Network Analysis" class=dd-item><a href=/SDS-2021/m2/00_assignments/assignment1/>Assignment 1 - Network Analysis
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/SDS-2021/m2/00_assignments/assignment2/ title="Assignment 2 - NLP" class=dd-item><a href=/SDS-2021/m2/00_assignments/assignment2/>Assignment 2 - NLP
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/SDS-2021/m2/00_assignments/group_assignment/ title="M2 (Mandatory) Assignment" class="dd-item active"><a href=/SDS-2021/m2/00_assignments/group_assignment/>M2 (Mandatory) Assignment
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/SDS-2021/m2/00_workshops/ title=Workshops class=dd-item><a href=/SDS-2021/m2/00_workshops/>Workshops
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/SDS-2021/m2/00_workshops/01_workshop1/ title="Workshop 1 - Danish Power Elites" class=dd-item><a href=/SDS-2021/m2/00_workshops/01_workshop1/>Workshop 1 - Danish Power Elites
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/SDS-2021/m2/00_workshops/02_workshop2/ title="Workshop 2 - Classification of Political US Tweets" class=dd-item><a href=/SDS-2021/m2/00_workshops/02_workshop2/>Workshop 2 - Classification of Political US Tweets
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/SDS-2021/m2/00_workshops/03_workshop3/ title="Workshop 3 - Advanced Applications with NLP and Networks" class=dd-item><a href=/SDS-2021/m2/00_workshops/03_workshop3/>Workshop 3 - Advanced Applications with NLP and Networks
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/SDS-2021/m2/01_networks/ title="Network Analysis" class=dd-item><a href=/SDS-2021/m2/01_networks/>Network Analysis
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/SDS-2021/m2/01_networks/1_networks/ title="Basics Network Analysis" class=dd-item><a href=/SDS-2021/m2/01_networks/1_networks/>Basics Network Analysis
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/SDS-2021/m2/01_networks/2_networks_intermediate/ title="Intermediate Network Analysis" class=dd-item><a href=/SDS-2021/m2/01_networks/2_networks_intermediate/>Intermediate Network Analysis
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/SDS-2021/m2/01_networks/3_networks_2mode/ title="Network 2-Mode" class=dd-item><a href=/SDS-2021/m2/01_networks/3_networks_2mode/>Network 2-Mode
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/SDS-2021/m2/02_nlp/ title="Natural Language Processing" class=dd-item><a href=/SDS-2021/m2/02_nlp/>Natural Language Processing
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/SDS-2021/m2/02_nlp/0_nlp_theory/ title="Natural Language Processing - Theory" class=dd-item><a href=/SDS-2021/m2/02_nlp/0_nlp_theory/>Natural Language Processing - Theory
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/SDS-2021/m2/02_nlp/1_nlp_string/ title="Application: String Manipulation" class=dd-item><a href=/SDS-2021/m2/02_nlp/1_nlp_string/>Application: String Manipulation
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/SDS-2021/m2/02_nlp/2_nlp_longtext/ title="Application: Working with long text" class=dd-item><a href=/SDS-2021/m2/02_nlp/2_nlp_longtext/>Application: Working with long text
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/SDS-2021/m2/02_nlp/3_nlp_topic/ title="Application: Vectorization and Topic Modelling" class=dd-item><a href=/SDS-2021/m2/02_nlp/3_nlp_topic/>Application: Vectorization and Topic Modelling
+<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li><li data-nav-id=/SDS-2021/m3/ title="Deep Learning" class=dd-item><a href=/SDS-2021/m3/><b>3. </b>Deep Learning
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/SDS-2021/m3/00_assignments/ title=Assignments class=dd-item><a href=/SDS-2021/m3/00_assignments/>Assignments
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/SDS-2021/m3/00_assignments/assignment1/ title="M3 Assignment - Elon vs. GPT-2" class=dd-item><a href=/SDS-2021/m3/00_assignments/assignment1/>M3 Assignment - Elon vs. GPT-2
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/SDS-2021/m3/00_assignments/group_assignment/ title="M3 (Mandatory) Assignment" class=dd-item><a href=/SDS-2021/m3/00_assignments/group_assignment/>M3 (Mandatory) Assignment
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/SDS-2021/m3/00_workshops/ title=Workshops class=dd-item><a href=/SDS-2021/m3/00_workshops/>Workshops
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/SDS-2021/m3/00_workshops/01_workshop1/ title="Workshop 1 - AirBnb revisited" class=dd-item><a href=/SDS-2021/m3/00_workshops/01_workshop1/>Workshop 1 - AirBnb revisited
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/SDS-2021/m3/00_workshops/02_workshop2/ title="Workshop 2 - Fun with Timeseries" class=dd-item><a href=/SDS-2021/m3/00_workshops/02_workshop2/>Workshop 2 - Fun with Timeseries
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/SDS-2021/m3/00_workshops/03_workshop3/ title="Workshop 3 - Advanced applicaions and wrap-up" class=dd-item><a href=/SDS-2021/m3/00_workshops/03_workshop3/>Workshop 3 - Advanced applicaions and wrap-up
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/SDS-2021/m3/01_ann/ title="Introduction to Neural Networks" class=dd-item><a href=/SDS-2021/m3/01_ann/>Introduction to Neural Networks
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/SDS-2021/m3/01_ann/1_ann/ title="Introduction Neural Networks" class=dd-item><a href=/SDS-2021/m3/01_ann/1_ann/>Introduction Neural Networks
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/SDS-2021/m3/02_cnn_rnn/ title="Advanced architectures" class=dd-item><a href=/SDS-2021/m3/02_cnn_rnn/>Advanced architectures
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/SDS-2021/m3/02_cnn_rnn/1_cnn/ title="Convolutional Neural Networks" class=dd-item><a href=/SDS-2021/m3/02_cnn_rnn/1_cnn/>Convolutional Neural Networks
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/SDS-2021/m3/02_cnn_rnn/2_rnn/ title="Recurrent Neural Networks" class=dd-item><a href=/SDS-2021/m3/02_cnn_rnn/2_rnn/>Recurrent Neural Networks
+<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li><li data-nav-id=/SDS-2021/m4/ title="Semester Project" class=dd-item><a href=/SDS-2021/m4/><b>4. </b>Semester Project
+<i class="fas fa-check read-icon"></i></a></li></ul><section id=prefooter><hr><ul><li><a class=padding href=# data-clear-history-toggle><i class="fas fa-history fa-fw"></i> Clear History</a></li></ul></section><section id=footer><center><p>Built with <a href=https://github.com/matcornic/hugo-theme-learn><i class="fas fa-heart"></i></a> from <a href=https://getgrav.org>Grav</a> and <a href=https://gohugo.io/>Hugo</a></p></center><script async defer src=https://buttons.github.io/buttons.js></script></section></div></nav><section id=body><div id=overlay></div><div class="padding highlightable"><div><div id=top-bar><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb><span id=sidebar-toggle-span><a href=# id=sidebar-toggle data-sidebar-toggle><i class="fas fa-bars"></i></a></span>
+<span class=links><a href=/SDS-2021/>Social Data Science 2021</a> > <a href=/SDS-2021/m2/>Network Analysis & NLP</a> > <a href=/SDS-2021/m2/00_assignments/>Assignments</a> > M2 (Mandatory) Assignment</span></div></div></div><div id=head-tags></div><div id=body-inner><h1>M2 (Mandatory) Assignment</h1><h2 id=sds-2021---m2-mandatory-assignment>SDS 2021 - M2: (Mandatory) Assignment</h2><h2 id=introduction>Introduction</h2><p>Now it is time to bring most these steps together and apply them to a setting that you find interesting. This should apply the following tasks.</p><ul><li>Identify an interesting problem that can be tackled using netork analysis and NLP techniques.</li><li>Optimally, this is done within one dataset. However, the assignment can also be done using 2 different datasets, if nothing suitable combinging both elements of netork analysis and NLP is found.</li><li>Select and obtain relevant data to do so.</li><li>Clean and manipulate the data to make it useful for network analysis and NLP techniques.</li><li>Execute an analysis containing elements of network analysis and NLP you have been exposed to (&mldr; or beyond)</li><li>Document your workflow in a reconstructable manner.</li><li>Report your findings in an accessible manner.</li></ul><h2 id=task-description>Task description</h2><p>Find and select datasets on your own, and perform an interesting and informative analysis using the elements stated above on your own.</p><h3 id=data--problem-identification>Data & Problem identification</h3><p>In this exercise, you are asked to choose and obtain a dataset you consider interesting and appropriate for the tasks required. You are welcome to use existing datasets for <a href=https://github.com/niderhoff/nlp-datasets target=_blank>language</a> and <a href=https://snap.stanford.edu/data/ target=_blank>networks</a> but at this stage you could also consider getting your own data (e.g. Twitter API, Instagram, news repositories etc.)</p><p>The data should be large enough and of proper granularity to be interesting for NLP and network analysis techniques. If you are in doubt, please reach out.</p><p>What we expect you to do:</p><ul><li>Identify an interesting problem that can be tackled using data science techniques applied to natural language and networks.</li><li>Select and obtain relevant data to do so.</li><li>Clean and manipulate the data to make it useful.</li><li>Carry out an exploratory data analysis to provide intuition into the content of the data, and interesting relationships to be found in it.</li><li>Use unsupervised ML techniques to discover relationships within the data such as interesting topics or latent network structures.</li><li>Use supervised ML techniques to create models that predict an outcome of interest.</li><li>Document your workflow in a reconstructable manner.</li><li>Report your findings in an accessible manner.</li></ul><h3 id=analysis-pipeline>Analysis pipeline</h3><p>The analysis to be carried out by you has to contain elements of <strong>data manipulation</strong>, <strong>exploration</strong>, <strong>unsupervised</strong> and <strong>supervised ML</strong> as applied to <strong>relational</strong> and <strong>language data</strong>.</p><p>In the best case, you combine network data with language elements. Twitter is a good (and easy) example, as you can, for instance, combine mention-networks with sentiments expressed in the tweets. The article below is a creative example of that (with a rather small NLP part).</p><p><a href=https://link.springer.com/chapter/10.1007/978-3-319-13734-6_25 target=_blank>Liu, Z., &amp;amp; Weber, I. (2014, November)</a>. Is Twitter a public sphere for online conflicts? A cross-ideological and cross-hierarchical look. In International Conference on Social Informatics (pp. 336-347). Springer, Cham.</p><ul><li>Definition of a problem statement and a short outline of the implementation</li><li>Description of data acquisition / how it was collected (by you or the publisher of the data)</li><li>Data preparation (general)<ul><li>Data cleaning (if needed)</li><li>Recoding (label encoding, dummy creation etc.)</li><li>Merging and wrangling (if needed)</li></ul></li><li>Missing data imputation (if applicable and deemed relevant)</li><li>Network Data - preparation<ul><li>Extraction and formatting</li><li>Creation of functional graphs with relevant attributes</li></ul></li><li>NLP - preparation<ul><li>Extraction & Cleaning</li><li>Tokenization</li><li>Filtering & Lemmatization / Stemming (if needed)</li></ul></li><li>Network analysis<ul><li>Calculation of relevant indicators on different levels / EDA</li><li>Projection (in the case of bipartite graphs)</li><li>Identification of community structures</li></ul></li><li>NLP<ul><li>EDA / simple frequency-based analysis</li><li>Simple vectorization (BoW, Tf-idf)</li><li>Topic modelling / Clustering (LDA / LSA)</li><li>Embedding-model based vectorization (Word2Vec, Fasttext, GloVe)</li><li>Semantic search</li></ul></li><li>Supervised / Unsupervised ML<ul><li>Try to link your results from network analysis or NLP with a more traditional ML problem.</li></ul></li></ul><p><strong>Many of the steps are optional.</strong> So choose which methods you deem helpful and relevant to explore your chosen problem.</p><p><strong>Note:</strong> Quality > Quantity. Consider which analysis, summarization, and visualization adds value. Excessive and unselective outputs (e.g. running 20 different models without providing a reason for, providing all possibilities of different plots without discussing and evaluating the insights gained from it) will not be considered helpful but rather distracting.</p><h3 id=some-inspirational-examples-non-binding-and-non-exhaustive>Some inspirational examples (non-binding, and non-exhaustive):</h3><ol><li>You obtain a dataset with tweets on a current debate (e.g. #MeeToo) and try to map the discourse.<ul><li>You perform “naive” NLP, counting handles, hashtags, basic plotting etc. to get some overview.</li><li>You perform “out-of-the-box” sentiment analysis and plot tweets on a map, colouring by sentiment.</li><li>You perform topic modelling and identify the sub-discussions.</li><li>Isolating handles/retweets, you identify some interaction patterns, use network indicator to identify thought leaders or conflicting communities as well as people that try to negotiate between positions.</li></ul></li><li>You obtain a bibliographic dataset on a field of study (or from an entity such as a university) of interest, e.g., from scopus.<ul><li>You perform a network analysis on different levels of aggregations, identifying key publications, scientists etc.</li><li>You run a topic model to identify relevant discourses.</li><li>You might then answer questions such as: Did the discourses change over time? In case so, who or what drives these changes?</li></ul></li></ol><h3 id=documentation-and-deliverables>Documentation and Deliverables</h3><p>You are asked to hand in a <strong>well commented functional computational notebook</strong></p><h4 id=computational-notebook>Computational Notebook</h4><p>The notebook targets a machine-learning literate audience. Here you can go deeper into the technical details and method considerations. Provide thorough documentation of the whole process, the used methods. Describe the intuition behind the selected and used methods, justify choices made, and interpret results (e.g. Why scaling? Why splitting the data? Why certain tabulations and visualizations? What can be seen from &mldr; ?, How did you select a particular algorithm? Why did you scale features in one way or another?).</p><p>Please provide the notebook as a PDF (Knittered from rmd or converted ipynb) with a public link to a functional Colab version (test it beforehand in incognito/private mode of your browser)</p><h4 id=stakeholder-report>Stakeholder Report</h4><p>The stakeholder report (simple PDF, no code) summarises the analysis for a <strong>non-technical</strong> audience. Here you don&rsquo;t need to discuss alternative approaches to standardization and alike.</p><p>Instead, you should try to explain the analysis and results, emphasizing its meaning and interpretation. Aim at a length of not more than 5 pages, including tables & visualizations.</p><h2 id=finally>Finally</h2><ul><li>Submission deadline is <strong>01.11</strong> - on <a href=https://digitaleksamen.aau.dk/ target=_blank>https://digitaleksamen.aau.dk/</a></li><li>Write to the secretary about your groups and language choice</li><li>In case of trouble/issues/questions, please write on Teams.</li></ul><footer class=footline></footer></div></div><div id=navigation><a class="nav nav-prev" href=/SDS-2021/m2/00_assignments/assignment2/ title="Assignment 2 - NLP"><i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/SDS-2021/m2/00_workshops/ title=Workshops style=margin-right:0><i class="fa fa-chevron-right"></i></a></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/SDS-2021/js/clipboard.min.js?1661771235></script>
+<script src=/SDS-2021/js/perfect-scrollbar.min.js?1661771235></script>
+<script src=/SDS-2021/js/perfect-scrollbar.jquery.min.js?1661771235></script>
+<script src=/SDS-2021/js/jquery.sticky.js?1661771235></script>
+<script src=/SDS-2021/js/featherlight.min.js?1661771235></script>
+<script src=/SDS-2021/js/highlight.pack.js?1661771235></script>
+<script>hljs.initHighlightingOnLoad()</script><script src=/SDS-2021/js/modernizr.custom-3.6.0.js?1661771235></script>
+<script src=/SDS-2021/js/learn.js?1661771235></script>
+<script src=/SDS-2021/js/hugo-learn.js?1661771235></script>
+<script src=/SDS-2021/mermaid/mermaid.js?1661771235></script>
+<script>mermaid.initialize({startOnLoad:!0})</script><script>(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-105947713-1","auto"),ga("send","pageview")</script></body></html>
