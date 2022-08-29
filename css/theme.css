@@ -511,7 +511,7 @@ div.notices p:first-child:after {
     left: 2rem;
 }
 div.notices.info p {
-    border-top: 30px solid #F0B37E;
+    border-top: 30px solid #958982;
     background: #FFF2DB;
 }
 div.notices.info p:first-child:after {
@@ -565,7 +565,7 @@ section.attachments .attachments-files {
 
 section.attachments.orange label {
     color: #fff;
-    background: #F0B37E;
+    background: #958982;
 }
 
 section.attachments.orange .attachments-files {
