@@ -56,10 +56,10 @@ body #chapter h1 {
     }
 }
 a {
-    color: #505d65;
+    color: #828c95;
 }
 a:hover {
-    color: #c4ab9b;
+    color: #c4bebb;
 }
 pre {
     position: relative;
@@ -286,7 +286,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     padding-right: 1rem;
 }
 #sidebar ul li.active > a {
-    background: #c4ab9b;
+    background: #c4bebb;
     color: #4c5b68 !important;
     margin-left: -1rem;
     margin-right: -1rem;
