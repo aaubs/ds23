@@ -121,7 +121,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 .searchbox {
     margin-top: 1rem;
     position: relative;
-    border: 1px solid #4c5b68;
+    border: 1px solid #bbc0c5;
     background: #bbc0c5;
     border-radius: 4px;
 }
@@ -173,7 +173,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     }
 }
 #sidebar {
-    background-color: #4c5b68;
+    background-color: #bbc0c5;
     position: fixed;
     top: 0;
     width: 300px;
@@ -688,7 +688,7 @@ hr {
     background: #35393c;
 }
 #body-inner .tabs-wrapper.ui-theme-badges .tabs-nav li.current a {
-    background: #4d5257;
+    background: #bbc0c5;
 }
 #body-inner pre {
     white-space: pre-wrap;
