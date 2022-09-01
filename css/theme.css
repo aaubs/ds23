@@ -286,8 +286,8 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     padding-right: 1rem;
 }
 #sidebar ul li.active > a {
-    background: #69594C;
-    color: #4c5b68 !important;
+    background: #8a7666;
+    color: #bbbfc4 !important;
     margin-left: -1rem;
     margin-right: -1rem;
     padding-left: 1rem;
@@ -511,29 +511,29 @@ div.notices p:first-child:after {
     left: 2rem;
 }
 div.notices.info p {
-    border-top: 30px solid #69594C;
-    background: #FFF2DB;
+    border-top: 30px solid #8a7666;
+    background: #e7e7e7;
 }
 div.notices.info p:first-child:after {
     content: 'Info';
 }
 div.notices.warning p {
     border-top: 30px solid rgba(217, 83, 79, 0.8);
-    background: #FAE2E2;
+    background: #e7e7e7;
 }
 div.notices.warning p:first-child:after {
     content: 'Warning';
 }
 div.notices.note p {
     border-top: 30px solid #3d79a1;
-    background: #E7F2FA;
+    background: #e7e7e7;
 }
 div.notices.note p:first-child:after {
     content: 'Note';
 }
 div.notices.tip p {
     border-top: 30px solid #4C5B68;
-    background: #E6F9E6;
+    background: #e7e7e7;
 }
 div.notices.tip p:first-child:after {
     content: 'Tip';
