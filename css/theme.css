@@ -56,7 +56,7 @@ body #chapter h1 {
     }
 }
 a {
-    color: #828c95;
+    color: #69594C;
 }
 a:hover {
     color: #c4bebb;
@@ -286,7 +286,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     padding-right: 1rem;
 }
 #sidebar ul li.active > a {
-    background: #c4bebb;
+    background: #69594C;
     color: #4c5b68 !important;
     margin-left: -1rem;
     margin-right: -1rem;
@@ -511,7 +511,7 @@ div.notices p:first-child:after {
     left: 2rem;
 }
 div.notices.info p {
-    border-top: 30px solid #958982;
+    border-top: 30px solid #69594C;
     background: #FFF2DB;
 }
 div.notices.info p:first-child:after {
@@ -525,14 +525,14 @@ div.notices.warning p:first-child:after {
     content: 'Warning';
 }
 div.notices.note p {
-    border-top: 30px solid #6AB0DE;
+    border-top: 30px solid #3d79a1;
     background: #E7F2FA;
 }
 div.notices.note p:first-child:after {
     content: 'Note';
 }
 div.notices.tip p {
-    border-top: 30px solid rgba(92, 184, 92, 0.8);
+    border-top: 30px solid #4C5B68;
     background: #E6F9E6;
 }
 div.notices.tip p:first-child:after {
