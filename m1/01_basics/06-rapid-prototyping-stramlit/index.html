@@ -1,9 +1,9 @@
-<!doctype html><html lang=en class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.102.3"><meta name=description content="Social / Business Data Science 2022"><meta name=author content="Roman Jurowetzki & Daniel Hain"><link rel=icon href=/ds22/images/favicon.png type=image/png><title>Rapid Prototyping with Streamlit :: Social / Business Data Science 2022</title><link href=/ds22/css/nucleus.css?1663017224 rel=stylesheet><link href=/ds22/css/fontawesome-all.min.css?1663017224 rel=stylesheet><link href=/ds22/css/hybrid.css?1663017224 rel=stylesheet><link href=/ds22/css/featherlight.min.css?1663017224 rel=stylesheet><link href=/ds22/css/perfect-scrollbar.min.css?1663017224 rel=stylesheet><link href=/ds22/css/auto-complete.css?1663017224 rel=stylesheet><link href=/ds22/css/atom-one-dark-reasonable.css?1663017224 rel=stylesheet><link href=/ds22/css/theme.css?1663017224 rel=stylesheet><link href=/ds22/css/tabs.css?1663017224 rel=stylesheet><link href=/ds22/css/hugo-theme.css?1663017224 rel=stylesheet><script src=/ds22/js/jquery-3.3.1.min.js?1663017224></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/ds22/m1/01_basics/06-rapid-prototyping-stramlit/><nav id=sidebar class=showVisitedLinks><div id=header-wrapper><div id=header><a href=https://aaubs.github.io/ds22/><img alt=logo src=/ds22/images/logo.png></a>
+<!doctype html><html lang=en class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.102.3"><meta name=description content="Social / Business Data Science 2022"><meta name=author content="Roman Jurowetzki & Daniel Hain"><link rel=icon href=/ds22/images/favicon.png type=image/png><title>Rapid Prototyping with Streamlit :: Social / Business Data Science 2022</title><link href=/ds22/css/nucleus.css?1663078904 rel=stylesheet><link href=/ds22/css/fontawesome-all.min.css?1663078904 rel=stylesheet><link href=/ds22/css/hybrid.css?1663078904 rel=stylesheet><link href=/ds22/css/featherlight.min.css?1663078904 rel=stylesheet><link href=/ds22/css/perfect-scrollbar.min.css?1663078904 rel=stylesheet><link href=/ds22/css/auto-complete.css?1663078904 rel=stylesheet><link href=/ds22/css/atom-one-dark-reasonable.css?1663078904 rel=stylesheet><link href=/ds22/css/theme.css?1663078904 rel=stylesheet><link href=/ds22/css/tabs.css?1663078904 rel=stylesheet><link href=/ds22/css/hugo-theme.css?1663078904 rel=stylesheet><script src=/ds22/js/jquery-3.3.1.min.js?1663078904></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/ds22/m1/01_basics/06-rapid-prototyping-stramlit/><nav id=sidebar class=showVisitedLinks><div id=header-wrapper><div id=header><a href=https://aaubs.github.io/ds22/><img alt=logo src=/ds22/images/logo.png></a>
 AAUBS Data Science 2022</div><div class=searchbox><label for=search-by><i class="fas fa-search"></i></label>
 <input data-search-input id=search-by type=search placeholder=Search...>
-<span data-search-clear><i class="fas fa-times"></i></span></div><script type=text/javascript src=/ds22/js/lunr.min.js?1663017224></script>
-<script type=text/javascript src=/ds22/js/auto-complete.js?1663017224></script>
-<script type=text/javascript>var baseurl="https://aaubs.github.io/ds22"</script><script type=text/javascript src=/ds22/js/search.js?1663017224></script></div><div class=highlightable><ul class=topics><li data-nav-id=/ds22/info/ title="Info, Schedule & Co" class=dd-item><a href=/ds22/info/>Info, Schedule & Co
+<span data-search-clear><i class="fas fa-times"></i></span></div><script type=text/javascript src=/ds22/js/lunr.min.js?1663078904></script>
+<script type=text/javascript src=/ds22/js/auto-complete.js?1663078904></script>
+<script type=text/javascript>var baseurl="https://aaubs.github.io/ds22"</script><script type=text/javascript src=/ds22/js/search.js?1663078904></script></div><div class=highlightable><ul class=topics><li data-nav-id=/ds22/info/ title="Info, Schedule & Co" class=dd-item><a href=/ds22/info/>Info, Schedule & Co
 <i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/ds22/info/01_infrastructure/ title=Infrastructure class=dd-item><a href=/ds22/info/01_infrastructure/>Infrastructure
 <i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/ds22/info/02_modules/ title=Modules class=dd-item><a href=/ds22/info/02_modules/>Modules
 <i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/ds22/info/04_litetrature/ title="Literature & Resources" class=dd-item><a href=/ds22/info/04_litetrature/>Literature & Resources
@@ -125,15 +125,119 @@ This is often done by adding a <code>requirements.txt</code> file to the project
 </span></span><span style=display:flex><span>altair
 </span></span><span style=display:flex><span>numpy
 </span></span><span style=display:flex><span>pandas
-</span></span></code></pre></div><footer class=footline></footer></div></div><div id=navigation><a class="nav nav-prev" href=/ds22/m1/01_basics/05-eda-hackathon/ title="M1 EDA Hackathon "><i class="fa fa-chevron-left"></i></a>
-<a class="nav nav-next" href=/ds22/m1/01_basics/01_stat_prog/ title="Basics Statistical Programming" style=margin-right:0><i class="fa fa-chevron-right"></i></a></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/ds22/js/clipboard.min.js?1663017225></script>
-<script src=/ds22/js/perfect-scrollbar.min.js?1663017225></script>
-<script src=/ds22/js/perfect-scrollbar.jquery.min.js?1663017225></script>
-<script src=/ds22/js/jquery.sticky.js?1663017225></script>
-<script src=/ds22/js/featherlight.min.js?1663017225></script>
-<script src=/ds22/js/highlight.pack.js?1663017225></script>
-<script>hljs.initHighlightingOnLoad()</script><script src=/ds22/js/modernizr.custom-3.6.0.js?1663017225></script>
-<script src=/ds22/js/learn.js?1663017225></script>
-<script src=/ds22/js/hugo-learn.js?1663017225></script>
-<script src=/ds22/mermaid/mermaid.js?1663017225></script>
+</span></span></code></pre></div><h3 id=all-code-in-one-place>All code in one place</h3><p><code>requirements.txt</code><div class=expand><div class=expand-label style=cursor:pointer onclick='$h=$(this),$h.next("div").slideToggle(100,function(){$h.children("i").attr("class",function(){return $h.next("div").is(":visible")?"fas fa-chevron-down":"fas fa-chevron-right"})})'><i style=font-size:x-small class="fas fa-chevron-right"></i>
+<span>Weekly to do</span></div><div class=expand-content style=display:none><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-txt data-lang=txt><span style=display:flex><span>pydeck
+</span></span><span style=display:flex><span>numpy
+</span></span><span style=display:flex><span>pandas
+</span></span><span style=display:flex><span>altair
+</span></span></code></pre></div></div></div></p><p><code>app.py</code><div class=expand><div class=expand-label style=cursor:pointer onclick='$h=$(this),$h.next("div").slideToggle(100,function(){$h.children("i").attr("class",function(){return $h.next("div").is(":visible")?"fas fa-chevron-down":"fas fa-chevron-right"})})'><i style=font-size:x-small class="fas fa-chevron-right"></i>
+<span>Weekly to do</span></div><div class=expand-content style=display:none><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#imports</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> streamlit <span style=color:#66d9ef>as</span> st
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> streamlit.components.v1 <span style=color:#66d9ef>as</span> components
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> pydeck <span style=color:#66d9ef>as</span> pdk
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> numpy <span style=color:#66d9ef>as</span> np
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> pandas <span style=color:#66d9ef>as</span> pd 
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> altair <span style=color:#66d9ef>as</span> alt
+</span></span><span style=display:flex><span>alt<span style=color:#f92672>.</span>renderers<span style=color:#f92672>.</span>set_embed_options(theme<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;dark&#39;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># page config</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>st<span style=color:#f92672>.</span>set_page_config(page_title<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;Streamlit - Dashboard 🤯&#39;</span>,
+</span></span><span style=display:flex><span>                    page_icon<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;🚀&#34;</span>,
+</span></span><span style=display:flex><span>                    layout<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;wide&#39;</span>
+</span></span><span style=display:flex><span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#load data</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@st</span><span style=color:#f92672>.</span>experimental_singleton
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>load_data</span>():
+</span></span><span style=display:flex><span>    data <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>read_csv(<span style=color:#e6db74>&#39;http://data.insideairbnb.com/denmark/hovedstaden/copenhagen/2022-06-24/visualisations/listings.csv&#39;</span>)
+</span></span><span style=display:flex><span>    data <span style=color:#f92672>=</span> data[data<span style=color:#f92672>.</span>number_of_reviews <span style=color:#f92672>&gt;</span> <span style=color:#ae81ff>0</span>]
+</span></span><span style=display:flex><span>    data <span style=color:#f92672>=</span> data[data<span style=color:#f92672>.</span>room_type<span style=color:#f92672>.</span>isin([<span style=color:#e6db74>&#39;Private room&#39;</span>, <span style=color:#e6db74>&#39;Entire home/apt&#39;</span>])]
+</span></span><span style=display:flex><span>    data[<span style=color:#e6db74>&#39;price_z&#39;</span>] <span style=color:#f92672>=</span> (data[<span style=color:#e6db74>&#39;price&#39;</span>] <span style=color:#f92672>-</span>data[<span style=color:#e6db74>&#39;price&#39;</span>]<span style=color:#f92672>.</span>mean())<span style=color:#f92672>/</span>data[<span style=color:#e6db74>&#39;price&#39;</span>]<span style=color:#f92672>.</span>std(ddof<span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>)
+</span></span><span style=display:flex><span>    data[<span style=color:#e6db74>&#39;price_z&#39;</span>] <span style=color:#f92672>=</span> data[<span style=color:#e6db74>&#39;price_z&#39;</span>]<span style=color:#f92672>.</span>abs()
+</span></span><span style=display:flex><span>    data <span style=color:#f92672>=</span> data[data<span style=color:#f92672>.</span>price_z <span style=color:#f92672>&lt;</span> <span style=color:#ae81ff>3</span>]
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> data
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>data <span style=color:#f92672>=</span> load_data()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 2. Page layout - e.g. a title</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>st<span style=color:#f92672>.</span>title(<span style=color:#e6db74>&#34;AirBnb rentals in Copenhagen 🇩🇰&#34;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#filter for price-range</span>
+</span></span><span style=display:flex><span>price_selected <span style=color:#f92672>=</span> st<span style=color:#f92672>.</span>slider(<span style=color:#e6db74>&#34;Select price range&#34;</span>, min_value <span style=color:#f92672>=</span> int(data<span style=color:#f92672>.</span>price<span style=color:#f92672>.</span>min()), max_value<span style=color:#f92672>=</span> int(data<span style=color:#f92672>.</span>price<span style=color:#f92672>.</span>max()), value <span style=color:#f92672>=</span> (<span style=color:#ae81ff>300</span>,<span style=color:#ae81ff>3000</span>), step<span style=color:#f92672>=</span><span style=color:#ae81ff>50</span>)
+</span></span><span style=display:flex><span>data <span style=color:#f92672>=</span> data[(data<span style=color:#f92672>.</span>price <span style=color:#f92672>&gt;</span> price_selected[<span style=color:#ae81ff>0</span>]) <span style=color:#f92672>&amp;</span> (data<span style=color:#f92672>.</span>price <span style=color:#f92672>&lt;</span> price_selected[<span style=color:#ae81ff>1</span>])]
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#filter for neighborhoods</span>
+</span></span><span style=display:flex><span>neighbourhood_select <span style=color:#f92672>=</span> st<span style=color:#f92672>.</span>multiselect(<span style=color:#e6db74>&#39;Select neighbourhoods&#39;</span>, data<span style=color:#f92672>.</span>neighbourhood<span style=color:#f92672>.</span>unique(), data<span style=color:#f92672>.</span>neighbourhood<span style=color:#f92672>.</span>unique())
+</span></span><span style=display:flex><span>data <span style=color:#f92672>=</span> data[data<span style=color:#f92672>.</span>neighbourhood<span style=color:#f92672>.</span>isin(neighbourhood_select)]
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#geoplot</span>
+</span></span><span style=display:flex><span>layer <span style=color:#f92672>=</span> pdk<span style=color:#f92672>.</span>Layer(
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;ScatterplotLayer&#34;</span>,
+</span></span><span style=display:flex><span>        data<span style=color:#f92672>=</span>data[[<span style=color:#e6db74>&#39;name&#39;</span>,<span style=color:#e6db74>&#39;room_type&#39;</span>,<span style=color:#e6db74>&#39;price&#39;</span>, <span style=color:#e6db74>&#34;longitude&#34;</span>, <span style=color:#e6db74>&#34;latitude&#34;</span>]]<span style=color:#f92672>.</span>dropna(),
+</span></span><span style=display:flex><span>        pickable<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>,
+</span></span><span style=display:flex><span>        opacity<span style=color:#f92672>=</span><span style=color:#ae81ff>0.7</span>,
+</span></span><span style=display:flex><span>        stroked<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>,
+</span></span><span style=display:flex><span>        filled<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>,
+</span></span><span style=display:flex><span>        radius_scale<span style=color:#f92672>=</span><span style=color:#ae81ff>10</span>,
+</span></span><span style=display:flex><span>        radius_min_pixels<span style=color:#f92672>=</span><span style=color:#ae81ff>1</span>,
+</span></span><span style=display:flex><span>        radius_max_pixels<span style=color:#f92672>=</span><span style=color:#ae81ff>100</span>,
+</span></span><span style=display:flex><span>        line_width_min_pixels<span style=color:#f92672>=</span><span style=color:#ae81ff>1</span>,
+</span></span><span style=display:flex><span>        get_position<span style=color:#f92672>=</span>[<span style=color:#e6db74>&#34;longitude&#34;</span>, <span style=color:#e6db74>&#34;latitude&#34;</span>],
+</span></span><span style=display:flex><span>        get_radius<span style=color:#f92672>=</span><span style=color:#ae81ff>10</span><span style=color:#f92672>*</span><span style=color:#e6db74>&#34;log_price&#34;</span>,
+</span></span><span style=display:flex><span>        get_color<span style=color:#f92672>=</span>[<span style=color:#ae81ff>255</span>, <span style=color:#ae81ff>140</span>, <span style=color:#ae81ff>0</span>],
+</span></span><span style=display:flex><span>        get_line_color<span style=color:#f92672>=</span>[<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>],
+</span></span><span style=display:flex><span>    )
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Set the viewport location</span>
+</span></span><span style=display:flex><span>view_state <span style=color:#f92672>=</span> pdk<span style=color:#f92672>.</span>ViewState(latitude<span style=color:#f92672>=</span>data[<span style=color:#e6db74>&#39;latitude&#39;</span>]<span style=color:#f92672>.</span>mean(), longitude<span style=color:#f92672>=</span>data[<span style=color:#e6db74>&#39;longitude&#39;</span>]<span style=color:#f92672>.</span>mean(), zoom<span style=color:#f92672>=</span><span style=color:#ae81ff>12</span>, pitch<span style=color:#f92672>=</span><span style=color:#ae81ff>50</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Renders</span>
+</span></span><span style=display:flex><span>r <span style=color:#f92672>=</span> pdk<span style=color:#f92672>.</span>Deck(layers<span style=color:#f92672>=</span>[layer], 
+</span></span><span style=display:flex><span>initial_view_state<span style=color:#f92672>=</span>view_state,
+</span></span><span style=display:flex><span><span style=color:#75715e>#map_style=&#39;mapbox://styles/mapbox/light-v9&#39;,</span>
+</span></span><span style=display:flex><span>tooltip<span style=color:#f92672>=</span>{<span style=color:#e6db74>&#34;text&#34;</span>: <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>{name}</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>{room_type}</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>{price}</span><span style=color:#e6db74>&#34;</span>}
+</span></span><span style=display:flex><span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># prefilter for altair</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>if</span> len(data) <span style=color:#f92672>&gt;</span> <span style=color:#ae81ff>5000</span>:
+</span></span><span style=display:flex><span>    data_alt <span style=color:#f92672>=</span> data<span style=color:#f92672>.</span>sample(<span style=color:#ae81ff>5000</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>if</span> len(data) <span style=color:#f92672>&lt;=</span> <span style=color:#ae81ff>5000</span>:
+</span></span><span style=display:flex><span>    data_alt <span style=color:#f92672>=</span> data
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#altair plot</span>
+</span></span><span style=display:flex><span>price_chart <span style=color:#f92672>=</span> alt<span style=color:#f92672>.</span>Chart(data)<span style=color:#f92672>.</span>mark_bar()<span style=color:#f92672>.</span>encode(
+</span></span><span style=display:flex><span>    x<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;mean(price):Q&#39;</span>,
+</span></span><span style=display:flex><span>    y<span style=color:#f92672>=</span>alt<span style=color:#f92672>.</span>Y(<span style=color:#e6db74>&#39;room_type:O&#39;</span>,axis<span style=color:#f92672>=</span>alt<span style=color:#f92672>.</span>Axis(labels<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>), title<span style=color:#f92672>=</span><span style=color:#e6db74>&#34; &#34;</span>),
+</span></span><span style=display:flex><span>    color<span style=color:#f92672>=</span>alt<span style=color:#f92672>.</span>Color(<span style=color:#e6db74>&#39;room_type:N&#39;</span>, scale<span style=color:#f92672>=</span>alt<span style=color:#f92672>.</span>Scale(scheme<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;lightorange&#39;</span>)),
+</span></span><span style=display:flex><span>    row<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;neighbourhood:N&#39;</span>,
+</span></span><span style=display:flex><span>    tooltip<span style=color:#f92672>=</span>[<span style=color:#e6db74>&#34;neighbourhood:N&#34;</span>, <span style=color:#e6db74>&#34;mean(price):Q&#34;</span>]
+</span></span><span style=display:flex><span>)<span style=color:#f92672>.</span>configure_view(strokeWidth<span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>)<span style=color:#f92672>.</span>interactive()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># display and layout</span>
+</span></span><span style=display:flex><span>row1_1, row1_2 <span style=color:#f92672>=</span> st<span style=color:#f92672>.</span>columns((<span style=color:#ae81ff>3</span>, <span style=color:#ae81ff>2</span>))
+</span></span><span style=display:flex><span><span style=color:#66d9ef>with</span> row1_1:
+</span></span><span style=display:flex><span>    st<span style=color:#f92672>.</span>pydeck_chart(r)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>with</span> row1_2:
+</span></span><span style=display:flex><span>    st<span style=color:#f92672>.</span>altair_chart(price_chart, use_container_width<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>)
+</span></span></code></pre></div></div></div></p><footer class=footline></footer></div></div><div id=navigation><a class="nav nav-prev" href=/ds22/m1/01_basics/05-eda-hackathon/ title="M1 EDA Hackathon "><i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/ds22/m1/01_basics/01_stat_prog/ title="Basics Statistical Programming" style=margin-right:0><i class="fa fa-chevron-right"></i></a></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/ds22/js/clipboard.min.js?1663078904></script>
+<script src=/ds22/js/perfect-scrollbar.min.js?1663078904></script>
+<script src=/ds22/js/perfect-scrollbar.jquery.min.js?1663078904></script>
+<script src=/ds22/js/jquery.sticky.js?1663078904></script>
+<script src=/ds22/js/featherlight.min.js?1663078904></script>
+<script src=/ds22/js/highlight.pack.js?1663078904></script>
+<script>hljs.initHighlightingOnLoad()</script><script src=/ds22/js/modernizr.custom-3.6.0.js?1663078904></script>
+<script src=/ds22/js/learn.js?1663078904></script>
+<script src=/ds22/js/hugo-learn.js?1663078904></script>
+<script src=/ds22/mermaid/mermaid.js?1663078904></script>
 <script>mermaid.initialize({startOnLoad:!0})</script><script>(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-105947713-1","auto"),ga("send","pageview")</script></body></html>
