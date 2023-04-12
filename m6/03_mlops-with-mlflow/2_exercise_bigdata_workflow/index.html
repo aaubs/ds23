@@ -1,4 +1,4 @@
-<!doctype html><html lang=en class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.111.3"><meta name=description content="Social / Business Data Science 2022"><meta name=author content="Roman Jurowetzki & Daniel Hain"><link rel=icon href=/ds22/images/favicon.png type=image/png><title>NLP Applications Chatbot :: Social / Business Data Science 2022</title><link href=/ds22/css/nucleus.css?1681287835 rel=stylesheet><link href=/ds22/css/fontawesome-all.min.css?1681287835 rel=stylesheet><link href=/ds22/css/hybrid.css?1681287835 rel=stylesheet><link href=/ds22/css/featherlight.min.css?1681287835 rel=stylesheet><link href=/ds22/css/perfect-scrollbar.min.css?1681287835 rel=stylesheet><link href=/ds22/css/auto-complete.css?1681287835 rel=stylesheet><link href=/ds22/css/atom-one-dark-reasonable.css?1681287835 rel=stylesheet><link href=/ds22/css/theme.css?1681287835 rel=stylesheet><link href=/ds22/css/tabs.css?1681287835 rel=stylesheet><link href=/ds22/css/hugo-theme.css?1681287835 rel=stylesheet><script src=/ds22/js/jquery-3.3.1.min.js?1681287835></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/ds22/m2/02_nlp/3-nlp-advanced/><nav id=sidebar class=showVisitedLinks><div id=header-wrapper><div id=header><a href=https://aaubs.github.io/ds22/><img alt=logo src=/ds22/images/logo.png></a>
+<!doctype html><html lang=en class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.111.3"><meta name=description content="Social / Business Data Science 2022"><meta name=author content="Roman Jurowetzki & Daniel Hain"><link rel=icon href=/ds22/images/favicon.png type=image/png><title>Exercise 2: Performing a Big Data workflow with Spark and Polars :: Social / Business Data Science 2022</title><link href=/ds22/css/nucleus.css?1681287835 rel=stylesheet><link href=/ds22/css/fontawesome-all.min.css?1681287835 rel=stylesheet><link href=/ds22/css/hybrid.css?1681287835 rel=stylesheet><link href=/ds22/css/featherlight.min.css?1681287835 rel=stylesheet><link href=/ds22/css/perfect-scrollbar.min.css?1681287835 rel=stylesheet><link href=/ds22/css/auto-complete.css?1681287835 rel=stylesheet><link href=/ds22/css/atom-one-dark-reasonable.css?1681287835 rel=stylesheet><link href=/ds22/css/theme.css?1681287835 rel=stylesheet><link href=/ds22/css/tabs.css?1681287835 rel=stylesheet><link href=/ds22/css/hugo-theme.css?1681287835 rel=stylesheet><script src=/ds22/js/jquery-3.3.1.min.js?1681287835></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/ds22/m6/03_mlops-with-mlflow/2_exercise_bigdata_workflow/><nav id=sidebar class=showVisitedLinks><div id=header-wrapper><div id=header><a href=https://aaubs.github.io/ds22/><img alt=logo src=/ds22/images/logo.png></a>
 AAUBS Data Science 2022</div><div class=searchbox><label for=search-by><i class="fas fa-search"></i></label>
 <input data-search-input id=search-by type=search placeholder=Search...>
 <span data-search-clear><i class="fas fa-times"></i></span></div><script type=text/javascript src=/ds22/js/lunr.min.js?1681287835></script>
@@ -27,18 +27,16 @@ AAUBS Data Science 2022</div><div class=searchbox><label for=search-by><i class=
 <i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/ds22/m1/03_sml/02-sml-ts/ title="Time Series Forecasts" class=dd-item><a href=/ds22/m1/03_sml/02-sml-ts/>Time Series Forecasts
 <i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/ds22/m1/03_sml/03-sml-addon/ title="SML - Further topics" class=dd-item><a href=/ds22/m1/03_sml/03-sml-addon/>SML - Further topics
 <i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/ds22/m1/03_sml/04-sml-workshop/ title="SML Appliations - Airbnb Pricing" class=dd-item><a href=/ds22/m1/03_sml/04-sml-workshop/>SML Appliations - Airbnb Pricing
-<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li><li data-nav-id=/ds22/m2/ title="Network Analysis & NLP" class="dd-item
-parent"><a href=/ds22/m2/><b>2. </b>Network Analysis & NLP
+<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li><li data-nav-id=/ds22/m2/ title="Network Analysis & NLP" class=dd-item><a href=/ds22/m2/><b>2. </b>Network Analysis & NLP
 <i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/ds22/m2/01_networks/ title="Network Analysis" class=dd-item><a href=/ds22/m2/01_networks/>Network Analysis
 <i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/ds22/m2/01_networks/1_networks/ title="Basics Network Analysis" class=dd-item><a href=/ds22/m2/01_networks/1_networks/>Basics Network Analysis
 <i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/ds22/m2/01_networks/2_networks_2mode/ title="2 Mode Networks" class=dd-item><a href=/ds22/m2/01_networks/2_networks_2mode/>2 Mode Networks
 <i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/ds22/m2/01_networks/3_exercises/ title="NW Exercises" class=dd-item><a href=/ds22/m2/01_networks/3_exercises/>NW Exercises
 <i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/ds22/m2/01_networks/4-tutorials-elites-eu-ai-companies/ title="NW Cases" class=dd-item><a href=/ds22/m2/01_networks/4-tutorials-elites-eu-ai-companies/>NW Cases
-<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/ds22/m2/02_nlp/ title="Natural Language Processing" class="dd-item
-parent"><a href=/ds22/m2/02_nlp/>Natural Language Processing
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/ds22/m2/02_nlp/ title="Natural Language Processing" class=dd-item><a href=/ds22/m2/02_nlp/>Natural Language Processing
 <i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/ds22/m2/02_nlp/1-nlp-intro-sml/ title="Basics of NLP" class=dd-item><a href=/ds22/m2/02_nlp/1-nlp-intro-sml/>Basics of NLP
 <i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/ds22/m2/02_nlp/2-nlp-topic-model/ title="NLP - Other areas" class=dd-item><a href=/ds22/m2/02_nlp/2-nlp-topic-model/>NLP - Other areas
-<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/ds22/m2/02_nlp/3-nlp-advanced/ title="NLP Applications Chatbot" class="dd-item active"><a href=/ds22/m2/02_nlp/3-nlp-advanced/>NLP Applications Chatbot
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/ds22/m2/02_nlp/3-nlp-advanced/ title="NLP Applications Chatbot" class=dd-item><a href=/ds22/m2/02_nlp/3-nlp-advanced/>NLP Applications Chatbot
 <i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/ds22/m2/02_nlp/4-nlp-embeddings/ title="NLP Word Vectors" class=dd-item><a href=/ds22/m2/02_nlp/4-nlp-embeddings/>NLP Word Vectors
 <i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li><li data-nav-id=/ds22/m4/ title="Applied Deep Learning and Artificial Intelligence" class=dd-item><a href=/ds22/m4/><b>4. </b>Applied Deep Learning and Artificial Intelligence
 <i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/ds22/m4/01_intro-to-deep-learning/ title="Intro to Deep Learning" class=dd-item><a href=/ds22/m4/01_intro-to-deep-learning/>Intro to Deep Learning
@@ -62,7 +60,8 @@ parent"><a href=/ds22/m2/02_nlp/>Natural Language Processing
 <i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/ds22/m4/04_transformer/3_exercise-session-4_pytorch/ title="Exercise Session 4" class=dd-item><a href=/ds22/m4/04_transformer/3_exercise-session-4_pytorch/>Exercise Session 4
 <i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li><li data-nav-id=/ds22/m5/ title="Data Governance and Ethics" class=dd-item><a href=/ds22/m5/><b>5. </b>Data Governance and Ethics
 <i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/ds22/m5/02_presentations/ title="In-calss Presentations" class=dd-item><a href=/ds22/m5/02_presentations/>In-calss Presentations
-<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/ds22/m6/ title="Data Engineering and MLOps" class=dd-item><a href=/ds22/m6/><b>6. </b>Data Engineering and MLOps
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/ds22/m6/ title="Data Engineering and MLOps" class="dd-item
+parent"><a href=/ds22/m6/><b>6. </b>Data Engineering and MLOps
 <i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/ds22/m6/01_databases/ title=Databases class=dd-item><a href=/ds22/m6/01_databases/>Databases
 <i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/ds22/m6/01_databases/01_databases/ title="Introduction to databases" class=dd-item><a href=/ds22/m6/01_databases/01_databases/>Introduction to databases
 <i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/ds22/m6/01_databases/2_exercise_poc_db_backend/ title="Building PoC with DB backend" class=dd-item><a href=/ds22/m6/01_databases/2_exercise_poc_db_backend/>Building PoC with DB backend
@@ -72,101 +71,14 @@ parent"><a href=/ds22/m2/02_nlp/>Natural Language Processing
 <i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/ds22/m6/02_big-data-workflows/1_-introduction-to-big-data-workflows/ title="Introduction to Big Data workflows" class=dd-item><a href=/ds22/m6/02_big-data-workflows/1_-introduction-to-big-data-workflows/>Introduction to Big Data workflows
 <i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/ds22/m6/02_big-data-workflows/2_exercise_bigdata_workflow/ title="Exercise 2: Performing a Big Data workflow with Spark and Polars" class=dd-item><a href=/ds22/m6/02_big-data-workflows/2_exercise_bigdata_workflow/>Exercise 2: Performing a Big Data workflow with Spark and Polars
 <i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/ds22/m6/02_big-data-workflows/3_group_assignment/ title="Group assignment 2" class=dd-item><a href=/ds22/m6/02_big-data-workflows/3_group_assignment/>Group assignment 2
-<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/ds22/m6/03_mlops-with-mlflow/ title=MLOps class=dd-item><a href=/ds22/m6/03_mlops-with-mlflow/>MLOps
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/ds22/m6/03_mlops-with-mlflow/ title=MLOps class="dd-item
+parent"><a href=/ds22/m6/03_mlops-with-mlflow/>MLOps
 <i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/ds22/m6/03_mlops-with-mlflow/1_-introduction-to-big-data-workflows/ title="Introduction to Big Data workflows" class=dd-item><a href=/ds22/m6/03_mlops-with-mlflow/1_-introduction-to-big-data-workflows/>Introduction to Big Data workflows
-<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/ds22/m6/03_mlops-with-mlflow/2_exercise_bigdata_workflow/ title="Exercise 2: Performing a Big Data workflow with Spark and Polars" class=dd-item><a href=/ds22/m6/03_mlops-with-mlflow/2_exercise_bigdata_workflow/>Exercise 2: Performing a Big Data workflow with Spark and Polars
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/ds22/m6/03_mlops-with-mlflow/2_exercise_bigdata_workflow/ title="Exercise 2: Performing a Big Data workflow with Spark and Polars" class="dd-item active"><a href=/ds22/m6/03_mlops-with-mlflow/2_exercise_bigdata_workflow/>Exercise 2: Performing a Big Data workflow with Spark and Polars
 <i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/ds22/m6/03_mlops-with-mlflow/3_group_assignment/ title="Group assignment 2" class=dd-item><a href=/ds22/m6/03_mlops-with-mlflow/3_group_assignment/>Group assignment 2
 <i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li></ul><section id=prefooter><hr><ul><li><a class=padding href=# data-clear-history-toggle><i class="fas fa-history fa-fw"></i> Clear History</a></li></ul></section><section id=footer><center><p>Built with <a href=https://github.com/matcornic/hugo-theme-learn><i class="fas fa-heart"></i></a> from <a href=https://getgrav.org>Grav</a> and <a href=https://gohugo.io/>Hugo</a></p></center><script async defer src=https://buttons.github.io/buttons.js></script></section></div></nav><section id=body><div id=overlay></div><div class="padding highlightable"><div><div id=top-bar><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb><span id=sidebar-toggle-span><a href=# id=sidebar-toggle data-sidebar-toggle><i class="fas fa-bars"></i></a></span>
-<span class=links><a href=/ds22/>Social / Business Data Science 2022</a> > <a href=/ds22/m2/>Network Analysis & NLP</a> > <a href=/ds22/m2/02_nlp/>Natural Language Processing</a> > NLP Applications Chatbot</span></div></div></div><div id=head-tags></div><div id=body-inner><h1>NLP Applications Chatbot</h1><p><img src=/ds22/images/viz-corgi-nlp3.png alt>
-Roman x <a href=https://stability.ai/blog/stable-diffusion-public-release target=_blank>Stable Diffusion</a></p><p>Chatbots are one of the most wide spread NLP applications.
-In this tutorial we will build a simple retrieval chatbot that can be used for example as an alternative for FAQ applications in companies.</p><p>The approach is following:</p><ol><li>Train a model on variants of a question.</li><li>Take input and predict the type of question asked - this is called &ldquo;intent&rdquo;</li><li>Reply with a pre-defined response corresponding to the question asked.</li></ol><p>Modern bots are more complex. They evaluate the whole (or large parts of the) dialogue. In addition some have the capacity to generate text.</p><p>The iput data looks like this:</p><div class=expand><div class=expand-label style=cursor:pointer onclick='$h=$(this),$h.next("div").slideToggle(100,function(){$h.children("i").attr("class",function(){return $h.next("div").is(":visible")?"fas fa-chevron-down":"fas fa-chevron-right"})})'><i style=font-size:x-small class="fas fa-chevron-right"></i>
-<span>👉 Expand to see JSON...</span></div><div class=expand-content style=display:none><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json><span style=display:flex><span>{
-</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;intents&#34;</span>: [
-</span></span><span style=display:flex><span>    {
-</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;tag&#34;</span>: <span style=color:#e6db74>&#34;greeting&#34;</span>,
-</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;patterns&#34;</span>: [
-</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;Hi&#34;</span>,
-</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;Hey&#34;</span>,
-</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;How are you&#34;</span>,
-</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;Is anyone there?&#34;</span>,
-</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;Hello&#34;</span>,
-</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;Good day&#34;</span>
-</span></span><span style=display:flex><span>      ],
-</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;responses&#34;</span>: [
-</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;Hey :-)&#34;</span>,
-</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;Hello, thanks for visiting&#34;</span>,
-</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;Hi there, what can I do for you?&#34;</span>,
-</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;Hi there, how can I help?&#34;</span>
-</span></span><span style=display:flex><span>      ]
-</span></span><span style=display:flex><span>    },
-</span></span><span style=display:flex><span>    {
-</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;tag&#34;</span>: <span style=color:#e6db74>&#34;goodbye&#34;</span>,
-</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;patterns&#34;</span>: [<span style=color:#e6db74>&#34;Bye&#34;</span>, <span style=color:#e6db74>&#34;See you later&#34;</span>, <span style=color:#e6db74>&#34;Goodbye&#34;</span>],
-</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;responses&#34;</span>: [
-</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;See you later, thanks for visiting&#34;</span>,
-</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;Have a nice day&#34;</span>,
-</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;Bye! Come back again soon.&#34;</span>
-</span></span><span style=display:flex><span>      ]
-</span></span><span style=display:flex><span>    },
-</span></span><span style=display:flex><span>    {
-</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;tag&#34;</span>: <span style=color:#e6db74>&#34;thanks&#34;</span>,
-</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;patterns&#34;</span>: [<span style=color:#e6db74>&#34;Thanks&#34;</span>, <span style=color:#e6db74>&#34;Thank you&#34;</span>, <span style=color:#e6db74>&#34;That&#39;s helpful&#34;</span>, <span style=color:#e6db74>&#34;Thank&#39;s a lot!&#34;</span>],
-</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;responses&#34;</span>: [<span style=color:#e6db74>&#34;Happy to help!&#34;</span>, <span style=color:#e6db74>&#34;Any time!&#34;</span>, <span style=color:#e6db74>&#34;My pleasure&#34;</span>]
-</span></span><span style=display:flex><span>    },
-</span></span><span style=display:flex><span>    {
-</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;tag&#34;</span>: <span style=color:#e6db74>&#34;items&#34;</span>,
-</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;patterns&#34;</span>: [
-</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;Which items do you have?&#34;</span>,
-</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;What kinds of items are there?&#34;</span>,
-</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;What do you sell?&#34;</span>
-</span></span><span style=display:flex><span>      ],
-</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;responses&#34;</span>: [
-</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;We sell coffee and tea&#34;</span>,
-</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;We have coffee and tea&#34;</span>
-</span></span><span style=display:flex><span>      ]
-</span></span><span style=display:flex><span>    },
-</span></span><span style=display:flex><span>    {
-</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;tag&#34;</span>: <span style=color:#e6db74>&#34;payments&#34;</span>,
-</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;patterns&#34;</span>: [
-</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;Do you take credit cards?&#34;</span>,
-</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;Do you accept Mastercard?&#34;</span>,
-</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;Can I pay with Paypal?&#34;</span>,
-</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;Are you cash only?&#34;</span>
-</span></span><span style=display:flex><span>      ],
-</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;responses&#34;</span>: [
-</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;We accept VISA, Mastercard and Paypal&#34;</span>,
-</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;We accept most major credit cards, and Paypal&#34;</span>
-</span></span><span style=display:flex><span>      ]
-</span></span><span style=display:flex><span>    },
-</span></span><span style=display:flex><span>    {
-</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;tag&#34;</span>: <span style=color:#e6db74>&#34;delivery&#34;</span>,
-</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;patterns&#34;</span>: [
-</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;How long does delivery take?&#34;</span>,
-</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;How long does shipping take?&#34;</span>,
-</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;When do I get my delivery?&#34;</span>
-</span></span><span style=display:flex><span>      ],
-</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;responses&#34;</span>: [
-</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;Delivery takes 2-4 days&#34;</span>,
-</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;Shipping takes 2-4 days&#34;</span>
-</span></span><span style=display:flex><span>      ]
-</span></span><span style=display:flex><span>    },
-</span></span><span style=display:flex><span>    {
-</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;tag&#34;</span>: <span style=color:#e6db74>&#34;funny&#34;</span>,
-</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;patterns&#34;</span>: [
-</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;Tell me a joke!&#34;</span>,
-</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;Tell me something funny!&#34;</span>,
-</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;Do you know a joke?&#34;</span>
-</span></span><span style=display:flex><span>      ],
-</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;responses&#34;</span>: [
-</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;Why did the hipster burn his mouth? He drank the coffee before it was cool.&#34;</span>,
-</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;What did the buffalo say when his son left for college? Bison.&#34;</span>
-</span></span><span style=display:flex><span>      ]
-</span></span><span style=display:flex><span>    }
-</span></span><span style=display:flex><span>  ]
-</span></span><span style=display:flex><span>}
-</span></span></code></pre></div></div></div><h2 id=notebook>Notebook</h2><p><a href=https://colab.research.google.com/github/aaubs/ds-master/blob/main/notebooks/M2_chatbot_train.ipynb target=_blank><i class="fas fa-laptop-code"></i>
-Training Chatbot</a></p><footer class=footline></footer></div></div><div id=navigation><a class="nav nav-prev" href=/ds22/m2/02_nlp/2-nlp-topic-model/ title="NLP - Other areas"><i class="fa fa-chevron-left"></i></a>
-<a class="nav nav-next" href=/ds22/m2/02_nlp/4-nlp-embeddings/ title="NLP Word Vectors" style=margin-right:0><i class="fa fa-chevron-right"></i></a></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/ds22/js/clipboard.min.js?1681287835></script>
+<span class=links><a href=/ds22/>Social / Business Data Science 2022</a> > <a href=/ds22/m6/>Data Engineering and MLOps</a> > <a href=/ds22/m6/03_mlops-with-mlflow/>MLOps</a> > Exercise 2: Performing a Big Data workflow with Spark and Polars</span></div></div></div><div id=head-tags></div><div id=body-inner><h1>Exercise 2: Performing a Big Data workflow with Spark and Polars</h1><img src=https://raw.githubusercontent.com/aaubs/ds-master/main/data/Images/Spark.png width=20><p>In this session, we will demonstrate how to use Apache Spark, a powerful Big Data processing engine, for processing large datasets in ML projects. The session will cover tasks such as setting up a Spark environment, reading and writing data, and performing transformations and aggregations on data. Additionally, we will also introduce Polars, a similar data manipulation library for Rust, and compare its features to those of Spark.</p><p>This session will provide hands-on exercises to reinforce your understanding and skills in working with Spark and Polars for processing big data in ML projects.</p><h2 id=notebooks>Notebooks</h2><h4 id=polars>Polars</h4><ul><li><a href=https://colab.research.google.com/github/aaubs/ds-master/blob/main/notebooks/M6_Exercises_for_the_Bike_Sharing_Demand_Dataset_using_Polars.ipynb target=_blank>Exercises for the Bike Sharing Demand Dataset using Polars</a></li><li><a href=https://colab.research.google.com/github/aaubs/ds-master/blob/main/notebooks/M6_Exercises_and_solutions_for_the_Bike_Sharing_Demand_Dataset_using_Polars.ipynb target=_blank>Exercises and solutions for the Bike Sharing Demand Dataset using Polars</a></li></ul><h4 id=spark>Spark</h4><ul><li><a href=https://colab.research.google.com/github/aaubs/ds-master/blob/main/notebooks/M6_Exercises_for_the_Bike_Sharing_Demand_Dataset_using_Spark.ipynb target=_blank>Exercises for the Bike Sharing Demand Dataset using Spark</a></li><li><a href=https://colab.research.google.com/github/aaubs/ds-master/blob/main/notebooks/M6_Exercises_and_solutions_for_the_Bike_Sharing_Demand_Dataset_using_Spark.ipynb target=_blank>Exercises and solutions for the Bike Sharing Demand Dataset using Spark</a></li></ul><footer class=footline></footer></div></div><div id=navigation><a class="nav nav-prev" href=/ds22/m6/03_mlops-with-mlflow/1_-introduction-to-big-data-workflows/ title="Introduction to Big Data workflows"><i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/ds22/m6/03_mlops-with-mlflow/3_group_assignment/ title="Group assignment 2" style=margin-right:0><i class="fa fa-chevron-right"></i></a></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/ds22/js/clipboard.min.js?1681287835></script>
 <script src=/ds22/js/perfect-scrollbar.min.js?1681287835></script>
 <script src=/ds22/js/perfect-scrollbar.jquery.min.js?1681287835></script>
 <script src=/ds22/js/jquery.sticky.js?1681287835></script>
